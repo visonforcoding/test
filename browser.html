@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta description="浏览器检测，中国的搜狗，猎豹浏览器这些JB都能检测出！" />
+	<title>浏览器检测</title>
+     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src='http://api.whichbrowser.net/rel/detect.js?k=78ed279e82c387242d3d65792a13191b&c=rrokbqut' type='text/javascript'></script>
+     <script type="text/javascript">
+     $(function(){
+     	Browsers = new WhichBrowser({
+				useFeatures:		true,
+				detectCamouflage:	true
+			});
+     	alert(Browsers);
+     })
+     </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>导航条</title>
+    <script src="./js/jquery-1.10.2.js"></script>
+    <script>
+      $(function(){
+            $('.toggle-down-menu').hover(function(){
+          $(this).children('ul.toggle-down').slideDown('normal', function() {     
+                });
+            },
+          function(){
+                    $(this).children('ul.toggle-down').slideUp('fast', function() {     
+                });
+            }
+            );
+        })
+    </script>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+
+      }
+      .clear{
+          clear:both;
+      }
+      nav{
+          background: #666666;
+          height: 40px;
+          line-height:40px;
+          color:#ffffff;
+
+      }
+      nav a{
+        text-decoration: none;
+      }
+      nav ul li a {
+        display: block;
+        color:inherit;
+      }
+      nav ul.nav>li{
+          float:left;
+          list-style: none;
+          margin-left:10px;
+          position: relative;
+      }
+      .nav ul.toggle-down{
+        display: none;
+        background: #ffffff;
+        border: 1px solid gray;
+        position: absolute;
+        box-shadow: 1px 0.5px 1px #999999;
+
+      }
+      .nav .toggle-down li{
+        text-align: center;
+        width:200px;
+      }
+      .nav .toggle-down li:hover{
+        background:#99CC00;
+      }
+      .nav .toggle-down a{
+        color: black;
+      }
+    </style>
+</head>
+<body>
+<nav>
+    <ul class="nav">
+        <li>Home</li>
+        <li>About us</li>
+        <li  class="toggle-down-menu"><a  href="#">Products</a>
+          <ul class="toggle-down">
+            <li><a href="#">one</a></li>
+            <li><a href="#">two</a></li>
+            <li><a href="#">three</a></li>
+            <li><a href="#">four</a></li>
+          </ul>
+        </li>
+        <li>Case</li>
+        <li>Contact us</li>
+    </ul>
+    <div class="clear"></div>
+</nav>
+</body>
+</html>
